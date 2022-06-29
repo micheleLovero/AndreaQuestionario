@@ -1,0 +1,162 @@
+<form name="questionario" id="questionario">
+        
+    <app-header></app-header>
+
+    <div id="salim" #salim>
+        <div class="container mt-50">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="display-4" id="testa"> <strong>QUESTIONARIO</strong></h2>
+                    <h3 style="color: #f09824; font-style: oblique;" class="display-4" id="easy"><strong>MEDIUM</strong></h3>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+        <table  id="mostra" class="content-table" >
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>N. Risposte Corrette</th>
+                <th>N. Risposte Totali</th>
+               
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="active-row">
+                <td>Risultati</td>
+                <td id="result"></td>
+                <td id="nDom"></td>
+                
+              </tr>
+             
+            </tbody>
+          </table>
+        <!-- <p id="result" style="text-align: center;"></p> -->
+        <!-- <h1 class="ttl " id="tll" >Questionario Pier</h1> -->
+    
+
+    <div class="wrapper" id="dm1">
+        <h3>Domanda 1</h3>
+        <hr>
+        <p>1. Quali sono le dimensioni di una variabile di tipo <strong>byte</strong>?</p>
+        <p><input type="radio" name="domanda1"id="domanda" value=1 (change)="radioChangedHandler($event)">A. 8 bit</p>	
+        <p><input type="radio" name="domanda1"id="domanda" value=2 (change)="radioChangedHandler($event)">B. 16 bit</p>
+        <p><input type="radio" name="domanda1" id="domanda"value=3 (change)="radioChangedHandler($event)">C. 32 bit</p>
+      
+        <p id="right1"  [ngClass]="{'wrapperErr' : Selector[0]}" *ngIf="Selector[0] == true  " >{{Corretta[0]}}</p>
+    </div>
+    <div class="wrapper2" id="dm2">
+        
+        <h3>Domanda 2</h3>
+        <hr>
+        <p>2. Quali sono le dimensioni di una variabile di tipo <strong>int</strong>?</p>
+        <p><input type="radio" name="domanda2" id="domanda"value=1 (change)="radioChangedHandler2($event)">A. 8 bit </p>	
+        <p><input type="radio" name="domanda2"id="domanda" value=2 (change)="radioChangedHandler2($event)">B. 16 bit </p>
+        <p><input type="radio" name="domanda2" id="domanda"value=3 (change)="radioChangedHandler2($event)">C. 32 bit</p>
+        <p id="right2"  [ngClass]="{'wrapperErr' : Selector[1]}" *ngIf="Selector[1] == true  " >{{Corretta[1]}}</p>
+        
+    </div>
+    <div class="wrapper" id="dm3">
+        <h3>Domanda 3</h3>
+        <hr>
+        <p>3. Quale &egrave; il valore di dafault di un variabile di tipo <strong>Object</strong>:</p>
+        <p><input type="radio" name="domanda3" value=1 (change)="radioChangedHandler3($event)">A. Undefined</p>	
+        <p><input type="radio" name="domanda3" value=2 (change)="radioChangedHandler3($event)">B. 0</p>
+        <p><input type="radio" name="domanda3" value=3 (change)="radioChangedHandler3($event)">C. Null</p>
+        <p id="right3"  [ngClass]="{'wrapperErr' : Selector[2]}" *ngIf="Selector[2] == true  " >{{Corretta[2]}}</p>
+        
+    </div>
+    <div class="wrapper2" id="dm4">
+        <h3>Domanda 4</h3>
+        <hr>
+        <p>4. Cosa si intende per <strong>Abstraction</strong>?</p>
+        <p><input type="radio" name="domanda4" value=1 (change)="radioChangedHandler4($event)">A. L'astrazione &egrave; una tecnica per definire diversi metodi dello stesso tipo.</p>	
+        <p><input type="radio" name="domanda4" value=2 (change)="radioChangedHandler4($event)">B. L'astrazione &egrave; la capacità di un oggetto di assumere molte forme.</p>
+        <p><input type="radio" name="domanda4" value=3 (change)="radioChangedHandler4($event)">C. Si riferisce alla capacit&agrave; di creare una classe astratta secondo il paradigma OOP.</p>
+        <p id="right4"  [ngClass]="{'wrapperErr' : Selector[3]}" *ngIf="Selector[3] == true  " >{{Corretta[3]}}</p>
+        
+    </div >
+    <div class="wrapper" id="dm5">
+        <h3>Domanda 5</h3>
+        <hr>
+        <p>5. Nel linguaggio Java, cosa si intende per classe <strong>final</strong>?</p>
+        <p><input type="radio" name="domanda5" value=1 (change)="radioChangedHandler5($event)">A. Le classi dichiarate <strong>final</strong> servono per dichiarare metodi che non possono essere sovrascitti.</p>	
+        <p><input type="radio" name="domanda5" value=2 (change)="radioChangedHandler5($event)">B. Le classi dichiarate <strong>final</strong> non possono essere estese da un'altra classe.</p>
+        <p><input type="radio" name="domanda5" value=3 (change)="radioChangedHandler5($event)">C. Entrambe le risposte sono corrette.</p>
+        <p id="right5"  [ngClass]="{'wrapperErr' : Selector[4]}" *ngIf="Selector[4] == true  " >{{Corretta[4]}}</p>
+        
+    </div >
+    <div class="wrapper2" id="dm6">
+        <h3>Domanda 6</h3>
+        <hr>
+        <p>6. Nel linguaggio Java, cosa &egrave; il polimorfismo <strong>runtime</strong>?</p>
+        <p><input type="radio" name="domanda6" value=1 (change)="radioChangedHandler6($event)">A. Il polimorfismo <strong>runtime</strong> &egrave; un processo per cui i metodi <strong>overridden</strong> vengono risolti a runtime e non a compile-time</p>	
+        <p><input type="radio" name="domanda6" value=2 (change)="radioChangedHandler6($event)">B. Il polimorfismo <strong>runtime</strong> &egrave; un processo per cui i metodi <strong>overloaded</strong> vengono risolti a runtime e non a compile-time</p>
+        <p><input type="radio" name="domanda6" value=3 (change)="radioChangedHandler6($event)">C. Entrambe le risposte sono corrette.</p>
+        <p id="right6"  [ngClass]="{'wrapperErr' : Selector[5]}" *ngIf="Selector[5] == true  " >{{Corretta[5]}}</p>
+        
+    </div >
+    <div class="wrapper" id="dm7">
+        <h3>Domanda 7</h3>
+        <hr>
+        <p>7. Nel linguaggio Java, una interfaccia pu&ograve;:</p>
+        <p><input type="radio" name="domanda7" value=1 (change)="radioChangedHandler7($event)">A. Essere estesa da una classe.</p>	
+        <p><input type="radio" name="domanda7" value=2 (change)="radioChangedHandler7($event)">B. Essere implementata da una classe.</p>
+        <p><input type="radio" name="domanda7" value=3 (change)="radioChangedHandler7($event)">C. Implementare un'altra interfaccia.</p>
+        <p id="right7"  [ngClass]="{'wrapperErr' : Selector[6]}" *ngIf="Selector[6] == true  " >{{Corretta[6]}}</p>
+        
+    </div>
+    <div class="wrapper2" id="dm8">
+        <h3>Domanda 8</h3>
+        <hr>
+        <p>8. Nel linguaggio Java, una classe astratta pu&ograve;:</p>
+        <p><input type="radio" name="domanda8" value=1 (change)="radioChangedHandler8($event)">A. Dichiarare esclusivamente metodi astratti.</p>	
+        <p><input type="radio" name="domanda8" value=2 (change)="radioChangedHandler8($event)">B. Dichiarare sia metodi astratti che concreti.</p>
+        <p><input type="radio" name="domanda8" value=3 (change)="radioChangedHandler8($event)">C. Non pu&ograve; dichiarare costruttori e metodi statici.</p>
+        <p id="right8"  [ngClass]="{'wrapperErr' : Selector[7]}" *ngIf="Selector[7] == true  " >{{Corretta[7]}}</p>
+        
+    </div>
+    <div class="wrapper" id="dm9">
+        <h3>Domanda 9</h3>
+        <hr>
+        <p>9. Nel linguaggio Java, una classe generica pu&ograve;:</p>
+        <p><input type="radio" name="domanda9" value=1 (change)="radioChangedHandler9($event)">A. Estendere una classe astratta e implementare una sola interfaccia.</p>	
+        <p><input type="radio" name="domanda9" value=2 (change)="radioChangedHandler9($event)">B. Estendere una classe astratta e implementare pi&ugrave; interfacce.</p>
+        <p><input type="radio" name="domanda9" value=3 (change)="radioChangedHandler9($event)">C. Se estende una classe astratta non pu&ograve; implementare alcuna interfaccia.</p>
+        <p id="right9"  [ngClass]="{'wrapperErr' : Selector[8]}" *ngIf="Selector[8] == true  " >{{Corretta[8]}}</p>
+   </div>     
+   <div class="wrapper2" id="dm10">
+    <h3>Domanda 10</h3>
+    <hr>
+    <p>10.  Nel linguaggio Java, cos'&egrave; una <strong>Wrapper</strong> class?</p>
+    <p><input type="radio" name="domanda10" value=1 (change)="radioChangedHandler10($event)">A. Fornisce il meccanismo per convertire una variabile di tipo primitivo in un oggetto e un oggetto in una variabile di tipo primitivo.</p>	
+    <p><input type="radio" name="domanda10" value=2 (change)="radioChangedHandler10($event)">B. Dichiara al suo interno un'altra classe.</p>
+    <p><input type="radio" name="domanda10" value=3 (change)="radioChangedHandler10($event)">C. Non esistono classi <strong>Wrapper</strong>.</p>
+    <p id="right10"  [ngClass]="{'wrapperErr' : Selector[9]}" *ngIf="Selector[9] == true  " >{{Corretta[9]}}</p>
+    
+</div>
+    <div class="wrapperBtn">
+    
+
+        <input [disabled]="isDisabled" class="btn-sub"  type="button" name="" value="Invia" id="button" (click)="controll(salim)">
+            </div>
+   
+</form>
+<div class=
+"footer-basic">
+    <footer>
+        <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="http://www.f2informatica.it">Home</a></li>
+            <li class="list-inline-item"><a href="http://www.f2informatica.it/#services">Services</a></li>
+            <li class="list-inline-item"><a href="http://www.f2informatica.it/prodotti.html">Products</a></li>
+            
+            <li class="list-inline-item"><a href="http://www.f2informatica.it/includes/privacy.pdf">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">&copy; Copyright 2022 f2informatica</p>
+    </footer>
+</div>
+
+
+
